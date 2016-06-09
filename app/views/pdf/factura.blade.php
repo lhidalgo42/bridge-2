@@ -102,7 +102,7 @@ $month = ['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOST
             class="ft1">{{$data['cli']->giro}}</span></div>
 <div style="position:absolute;top:309;left:586"><span class="ft1"> Comuna:</span></div>
 <div style="position:absolute;top:336;left:586"><span class="ft1">Ciudad:</span></div>
-<div style="position:absolute;top:336;left:586"><span class="ft1">Orden de Compra:</span></div>
+<div style="position:absolute;top:362;left:586"><span class="ft1">Orden de Compra:</span></div>
 <div style="position:absolute;top:309;left:749"><span
             class="ft1"> {{$data['cli']->comuna}}</span></div>
 <div style="position:absolute;top:336;left:749"><span

@@ -33,7 +33,6 @@ class PdfController extends \BaseController
         if ($response) {
             return base64_encode(file_get_contents($response));
         }
-
     }
 
     public function boleta()
