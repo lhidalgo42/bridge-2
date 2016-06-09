@@ -11,7 +11,8 @@ class HtmlController extends \BaseController {
 	public static function factura($folio){
 		$data['doc'] = Fac::where('numero','=',$folio)->get()->first();
 		$data['cli'] = Cli::where('rut','=',$data['doc']->rutcli)->get()->first();
-		return View::make('pdf.factura')->with(compact('data'));
+		$html = View::make('pdf.factura')->with(compact('data'))->render();
+		return $html;
 	}
 
 	/**

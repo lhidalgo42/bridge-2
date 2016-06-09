@@ -2,83 +2,49 @@
 
 class PdfController extends \BaseController {
 
-	/**
-	 * Display a listing of the resource.
-	 * GET /pdf
-	 *
-	 * @return Response
-	 */
-	public function index()
+	public static function factura($folio){
+		$dir = base_path('/public/PDF');
+		$filename = $dir . '/T33F'.$folio.'.pdf';
+		$html = HtmlController::factura($folio);
+		$option = [
+				"height" => "1107px",        // allowed units: mm, cm, in, px
+				"width" => "844px",            // allowed units: mm, cm, in, px
+			//"orientation" => "portrait", // portrait or landscape
+			//"border" =>0,
+		];
+		$response = Curl::post('localhost:3000/',array('html' => $html, 'options' => $option, 'rute' => '/public/PDF/T33F'.$folio.'.pdf'));
+		if ($response)
+			return array('filename' => $filename, 'base64' => base64_encode(file_get_contents($filename)));
+	}
+
+	public function boleta()
 	{
 		//
 	}
 
-	/**
-	 * Show the form for creating a new resource.
-	 * GET /pdf/create
-	 *
-	 * @return Response
-	 */
-	public function create()
+	public function guia()
 	{
 		//
 	}
 
-	/**
-	 * Store a newly created resource in storage.
-	 * POST /pdf
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
-	}
 
-	/**
-	 * Display the specified resource.
-	 * GET /pdf/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
+	public static function nc($folio)
 	{
-		//
-	}
+        $dir = base_path('/public/PDF');
+        $filename = $dir . '/T33F'.$folio.'.pdf';
+        $html = HtmlController::nc($folio);
+        $option = [
+            "height" => "1107px",        // allowed units: mm, cm, in, px
+            "width" => "844px",            // allowed units: mm, cm, in, px
+            //"orientation" => "portrait", // portrait or landscape
+            //"border" =>0,
+        ];
+        $response = Curl::post('localhost:3000/',array('html' => $html, 'options' => $option, 'rute' => '/public/PDF/T33F'.$folio.'.pdf'));
+        if ($response)
+            return array('filename' => $filename, 'base64' => base64_encode(file_get_contents($filename)));
+    }
 
-	/**
-	 * Show the form for editing the specified resource.
-	 * GET /pdf/{id}/edit
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-	/**
-	 * Update the specified resource in storage.
-	 * PUT /pdf/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
-
-	/**
-	 * Remove the specified resource from storage.
-	 * DELETE /pdf/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
+	public function nb()
 	{
 		//
 	}

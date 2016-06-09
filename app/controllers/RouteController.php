@@ -24,6 +24,20 @@ class RouteController extends \BaseController {
 				return HtmlController::nd($folio);
 			}
 		}
+		if($format == 'PDF'){
+			if($type == 33){
+				return PdfController::factura($folio);
+			}
+			if($type == 61){
+				return PdfController::nc($folio);
+			}
+			if($type == 56){
+				return PdfController::nd($folio);
+			}
+			if($type == 52){
+				return PdfController::nd($folio);
+			}
+		}
 	}
 
 	/**
