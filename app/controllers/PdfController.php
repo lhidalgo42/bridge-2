@@ -10,7 +10,7 @@ class PdfController extends \BaseController {
 			//"orientation" => "portrait", // portrait or landscape
 			//"border" =>0,
 		];
-        $response = Curl::to('localhost:3000/')->withData(array('html' => $html, 'options' => $option, 'rute' => '../mafer/public/pdf/T33F'.$folio.'.pdf'))->post();
+        $response = Curl::to('localhost:2000/')->withData(array('html' => $html, 'options' => $option, 'rute' => '../mafer/public/pdf/T33F'.$folio.'.pdf'))->post();
         if ($response)
 			return array('filename' => $response, 'base64' => base64_encode(file_get_contents($response)));
 	}
