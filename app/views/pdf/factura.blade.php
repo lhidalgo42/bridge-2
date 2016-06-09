@@ -176,7 +176,7 @@ $h = 498;?>
     $h = $h + 18;
     ?>
 
-<div style="position:absolute;top:1400;left:1001"><span class="ft0">CEDIBLE</span>
+
 </div>
 </body>
 </html>
