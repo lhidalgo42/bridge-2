@@ -9,23 +9,23 @@ class SoapController extends \BaseController {
 		$server->setClass('Acme\Helpers\Soap');
 		$server->handle();
 	}
-	public function client($method,$host,$folio,$type,$rut,$cedible){
-		$client = new SoapClient(null, array(
-				'location' => "http://".$host."/ws",
-				'uri'      => "urn://186.10.18.50:8000/ws",
-				'trace'    => 1 ));
+    public function client($method,$folio,$type){
+        $client = new SoapClient(null, array(
+            'location' => "http://52.67.7.37/ws",
+            'uri'      => "urn://52.67.7.37/ws",
+            'trace'    => 1 ));
 
-		$client->__soapCall($method,array('folio' => $folio,'type' => $type,'rut' => $rut,'cedible' => $cedible));
+        $client->__soapCall($method,array('folio' => $folio,'type' => $type));
 
-		echo("\nDumping request headers:\n"
-				.$client->__getLastRequestHeaders());
+        echo("\nDumping request headers:\n"
+            .$client->__getLastRequestHeaders());
 
-		echo("\nDumping request:\n".$client->__getLastRequest());
+        echo("\nDumping request:\n".$client->__getLastRequest());
 
-		echo("\nDumping response headers:\n"
-				.$client->__getLastResponseHeaders());
+        echo("\nDumping response headers:\n"
+            .$client->__getLastResponseHeaders());
 
-		echo("\nDumping response:\n".$client->__getLastResponse());
-	}
+        echo("\nDumping response:\n".$client->__getLastResponse());
+    }
 
 }

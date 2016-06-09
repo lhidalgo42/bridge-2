@@ -3,39 +3,24 @@
 namespace Acme\Helpers;
 
 class Soap
-{
-    /*
-     * Save PDF file in a database
+{    /*
      *
-     */
-    public function PDF($folio,$type,$rut='78345840-3',$cedible = '0'){
-        $dte = new DTEController();
-        $dte->getDTE($folio,$type,$rut,$cedible);
-        return 'ok';
-    }
-    /*
      * Return PDF in Base64
      *
-     *
      */
-    public function getBase64PDF($folio,$type,$rut,$cedible){
-        $dte = new DTEController();
-        $pdf = $dte->getDTE($folio,$type,$rut,$cedible);
-        if(isset($pdf['base64']))
-            return $pdf['base64'];
+    public function getBase64PDF($folio,$type){
+        $pdf = new \PdfController();
+        if($type == 33)
+            $data = $pdf->factura($folio);
+        if($type == 61)
+            $data = $pdf->nc($folio);
+        if($type == 56)
+            $data = $pdf->nd($folio);
+        if($type == 52)
+            $data = $pdf->guia($folio);
+        if(isset($data['base64']))
+            return $data['base64'];
         else
-            return $pdf;
-    }
-    /*
-     * Return PDF Fileroute
-     *
-     */
-    public function getFilenamePDF($folio,$type,$rut='78345840-3',$cedible = '0'){
-        $dte = new DTEController();
-        $pdf = $dte->getDTE($folio,$type,$rut,$cedible);
-        if(isset($pdf['filename']))
-            return $pdf['filename'];
-        else
-            return $pdf;
+            return $data;
     }
 }

@@ -46,6 +46,7 @@ Route::get('ws/', function(){
 	$server->service(file_get_contents("php://input"));
 });
 Route::get('/get/{format}/{folio}/{type}','RouteController@index');
+Route::get('/client/{method}/{folio}/{type}','SoapController@client');
 
 
 /*
