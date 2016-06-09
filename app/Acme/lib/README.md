@@ -1,0 +1,134 @@
+LibreDTE: Biblioteca PHP
+========================
+
+[![Build Status](https://travis-ci.org/LibreDTE/libredte-lib.svg?branch=master)](https://travis-ci.org/LibreDTE/libredte-lib)
+[![Dependency Status](https://www.versioneye.com/user/projects/56a98dbe7e03c7003db68c7c/badge.svg)](https://www.versioneye.com/user/projects/56a98dbe7e03c7003db68c7c)
+[![Total Downloads](https://poser.pugx.org/sasco/libredte/downloads)](https://packagist.org/packages/sasco/libredte)
+[![Monthly Downloads](https://poser.pugx.org/sasco/libredte/d/monthly)](https://packagist.org/packages/sasco/libredte)
+[![License](https://poser.pugx.org/sasco/libredte/license)](https://packagist.org/packages/sasco/libredte)
+
+LibreDTE es un proyecto que tiene por objetivo proveer facturación electrónica
+libre para Chile.
+
+Aquí podrás encontrar la biblioteca escrita en lenguaje PHP para la interacción
+con el Servicio de Impuestos Internos (SII).
+
+La biblioteca se construye originalmente para ser usada en el módulo
+[Dte](https://github.com/LibreDTE/libredte-sowerphp) del framework
+[SowerPHP](http://sowerphp.org). En esta biblioteca sólo estará lo básico, sin
+interfaces de usuario, para que un desarrollador pueda construir su propia
+aplicación.
+
+Si deseas una aplicación ya construída puedes revisar el
+[sitio web oficial de LibreDTE](http://libredte.cl) donde podrás registrarte
+gratuitamente y usar la plataforma web de facturación. Si deseas acceder al
+código fuente de la aplicación web puedes hacerlo
+[aquí](https://github.com/LibreDTE/libredte-webapp).
+
+Funcionalidades implementadas
+-----------------------------
+
+- Obtención de token para autenticación automática.
+- Obtención de estado de un DTE a través del folio, fecha y monto.
+- Envío automático de archivo XML de DTE al SII.
+- Generación, y envío, de XML EnvioDTE firmado.
+- Consulta del estado de envío de DTE a través de su Track ID.
+- Consulta del estado de envío de un Libro a través de su Track ID.
+- Generación de XML, timbraje y firma del DTE.
+- Documentos certificados por el SII:
+    - Factura electrónica (33)
+    - Factura exenta electrónica (34)
+    - Boleta electrónica (39)
+    - Boleta exenta electrónica (41)
+    - Factura de compra electrónica (46)
+    - Guía de despacho electrónica (52)
+    - Nota de débito electrónica (56)
+    - Nota de crédito electrónica (61)
+    - Información electrónica de compras y ventas (IECV)
+    - Libro de guías de despacho electrónico
+    - Libro de boletas y reporte de consumo de folios
+- Etapa de intercambio con otros contribuyentes:
+    - Acuse de recibo
+    - Recibo de mercaderías y servicios prestados
+    - Resultado validación
+- Generación de documentos en PDF, con muestras aceptadas por el SII.
+
+Instalación
+-----------
+
+Directamente desde la terminal con:
+
+	$ composer require sasco/libredte dev-master
+
+O editando el archivo *composer.json* y agregando:
+
+	{
+		"require": {
+			 "sasco/libredte": "dev-master"
+		}
+	}
+
+Por el momento, la única versión disponible es la de desarrollo.
+
+Documentación
+-------------
+
+La documentación está disponible en formato HTML generada con Doxygen en:
+<http://doc.libredte.cl>.
+
+Los ejemplos están disponibles en el directorio
+[examples](https://github.com/LibreDTE/libredte-lib/tree/master/examples).
+
+Términos y condiciones de uso
+-----------------------------
+
+Al utilizar este proyecto, total o parcialmente, automáticamente se acepta
+cumplir con los [términos y condiciones de uso](https://wiki.libredte.cl/doku.php/terminos)
+que rigen a LibreDTE. La [Licencia Pública General Affero de GNU (AGPL)](https://raw.githubusercontent.com/LibreDTE/libredte-lib/master/COPYING)
+sólo aplica para quienes respeten los términos y condiciones de uso. No existe
+una licencia comercial de LibreDTE, por lo cual no es posible usar el proyecto
+si no aceptas cumplir dichos términos y condiciones.
+
+La versión resumida de los términos y condiciones de uso de LibreDTE que
+permiten utilizar el proyecto, son los siguientes:
+
+- Tienes la libertad de: usar, estudiar, distribuir y cambiar LibreDTE.
+- Si utilizas LibreDTE en tu software, el código fuente de dicho software deberá
+  ser liberado de manera pública bajo licencia AGPL.
+- Si haces cambios a LibreDTE deberás liberar de manera pública el código fuente
+  de dichos cambios bajo licencia AGPL.
+- Debes hacer referencia de manera pública en tu software al proyecto y autor
+  original de LibreDTE, tanto si usas LibreDTE sin modificar o realizando
+  cambios al código.
+
+Es obligación de quienes quieran usar el proyecto leer y aceptar por completo
+los [términos y condiciones de uso](https://wiki.libredte.cl/doku.php/terminos).
+
+Contribuir al proyecto
+----------------------
+
+Si deseas contribuir con el proyecto, especialmente resolviendo alguna de las
+[*issues* abiertas](https://github.com/LibreDTE/libredte-lib/issues) o creando nuevos
+[ejemplos](https://github.com/LibreDTE/libredte-lib/tree/master/examples) sobre el
+uso de la biblioteca, debes:
+
+1. Hacer fork del proyecto en [GitHub](https://github.com/LibreDTE/libredte-lib)
+2. Crear una *branch* para los cambios: git checkout -b nombre-branch
+3. Modificar código: git commit -am 'Se agrega...'
+4. Publicar cambios: git push origin nombre-branch
+5. Crear un *pull request* para unir la nueva *branch* con LibreDTE.
+
+**IMPORTANTE**: antes de hacer un *pull request* verificar que el código
+cumpla con los estándares [PSR-1](http://www.php-fig.org/psr/psr-1),
+[PSR-2](http://www.php-fig.org/psr/psr-2) y
+[PSR-4](http://www.php-fig.org/psr/psr-4).
+
+Contacto y redes sociales
+-------------------------
+
+- Sitio web: <http://libredte.cl>
+- Twitter: <https://twitter.com/LibreDTE>
+- Facebook: <https://www.facebook.com/LibreDTE>
+- Google+: <https://plus.google.com/u/0/101078963971350176990/about>
+- Linkedin: <https://www.linkedin.com/grp/home?gid=8403251>
+- Youtube: <https://www.youtube.com/channel/UCnh5duQUXmo4l8AD28PakiQ>
