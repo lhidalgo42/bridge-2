@@ -141,7 +141,6 @@ $month = ['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOST
 </div>
 <div style="position:absolute;top:1119;left:833"><span class="ft1">TOTAL</span></div>
 <?php $to_text = new Acme\Helpers\NumberToLetterConverter(); ?>
-<div style="position:absolute;top:1000;left:49;border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 22px 0 21px; height: 0;"><hr></div>
 <div style="position:absolute;top:1023;left:49"><span class="ft1">SON: {{$to_text->to_word($data['doc']->total)}}</span></div>
 <div style="position:absolute;top:1045;left:589"><span class="ft1"> Exento</span></div>
 <div style="position:absolute;top:1083;left:589"><span class="ft1">Descuento</span></div>
