@@ -7,7 +7,7 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"laracasts/validation" : "~1.0",
-		"anlutro/curl": "^1.4",
+		"ixudra/curl": "6.*",
 		"noiselabs/nusoap-bundle": "^0.2.2"
 	},
 	"require-dev": {

@@ -47,6 +47,9 @@ Route::get('ws/', function(){
 });
 Route::get('/get/{format}/{folio}/{type}','RouteController@index');
 Route::get('/client/{method}/{folio}/{type}','SoapController@client');
+Route::any('/test',function(){
+	return Input::all();
+});
 
 
 /*

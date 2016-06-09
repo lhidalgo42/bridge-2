@@ -19,12 +19,9 @@ class SoapController extends \BaseController {
 
         echo("\nDumping request headers:\n"
             .$client->__getLastRequestHeaders());
-
         echo("\nDumping request:\n".$client->__getLastRequest());
-
         echo("\nDumping response headers:\n"
             .$client->__getLastResponseHeaders());
-
         echo("\nDumping response:\n".$client->__getLastResponse());
     }
 

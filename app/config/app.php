@@ -123,6 +123,8 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
         'Laracasts\Validation\ValidationServiceProvider',
         'Way\Generators\GeneratorsServiceProvider',
+		'Ixudra\Curl\CurlServiceProvider',
+
 
 
 	),
@@ -191,7 +193,7 @@ return array(
 		'URL'               => 'Illuminate\Support\Facades\URL',
 		'Validator'         => 'Illuminate\Support\Facades\Validator',
 		'View'              => 'Illuminate\Support\Facades\View',
-		'cURL'			 	=> 'anlutro\cURL\Laravel\cURL'
+		'Curl'	            => 'Ixudra\Curl\Facades\Curl',
 
 	),
 
