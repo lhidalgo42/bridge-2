@@ -15,7 +15,7 @@ class SoapController extends \BaseController {
             'uri'      => "urn://52.67.7.37/ws",
             'trace'    => 1 ));
 
-        $client->__soapCall($method,array('folio' => $folio,'type' => $type));
+        $client->__soapCall("getBase64PDF",array('folio' => $folio,'type' => $type));
 
         echo("\nDumping request headers:\n"
             .$client->__getLastRequestHeaders());

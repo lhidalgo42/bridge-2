@@ -174,8 +174,6 @@ $h = 498;?>
     ?>
 
 <div style="position:absolute;top:1400;left:1001"><span class="ft0">CEDIBLE</span>
-
-<div style="position:absolute;top:1410;left:50"><span class="ft1">Desarrollado por INGENIERIA RIFCIF www.rifcif.cl</span></div>
 </div>
 </body>
 </html>
