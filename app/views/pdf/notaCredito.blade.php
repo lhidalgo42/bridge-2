@@ -77,7 +77,7 @@
 </head>
 <body vlink="#FFFFFF" link="#FFFFFF" bgcolor="#ffffff">
 <div style="position:absolute;top:0;left:0"><img width="1136" height="1475"
-                                                 src="http://bridge/img/pdf/33.png"></div>
+                                                 src="http://localhost/img/pdf/33.png"></div>
 <div style="position:absolute;top:217;left:763"><span class="ft0">S.I.I. - SANTIAGO CENTRO</span></div>
 <?php
 $day = date('d ', strtotime($data['doc']['fecha']));
