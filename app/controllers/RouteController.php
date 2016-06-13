@@ -43,7 +43,7 @@ class RouteController extends \BaseController {
 				return PdfController::facturaBase64($folio);
 			}
 			if($type == 61){
-				return PdfController::nc($folio);
+				return PdfController::ncBase64($folio);
 			}
 			if($type == 56){
 				return PdfController::nd($folio);
