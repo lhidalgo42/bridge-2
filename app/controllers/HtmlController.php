@@ -49,7 +49,7 @@ class HtmlController extends \BaseController {
 		$data['doc'] = Cre::where('folio','=',$folio)->get()->first();
 		$fac = Fac::where('numero','=',$data['doc']->factura)->get()->first();
 		$data['cli'] = Cli::where('rut','=',$fac->rutcli)->get()->first();
-		return View::make('pdf.notaCredito')->with(compact('data'));
+		return View::make('pdf.notaCredito')->with(compact('data'))->render();
 	}
 
 	/**
