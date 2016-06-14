@@ -34,7 +34,7 @@
         .ft0 {
             font-style: normal;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 19px;
             font-family: Arial;
             color: #fe0000;
         }
@@ -109,8 +109,8 @@ $month = ['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOST
 <div style="position:absolute;top:387;left:586"><span class="ft1">Condición Venta:</span></div>
 <div style="position:absolute;top:387;left:747"><span class="ft1"> {{$data['doc']->condicion}}</span></div>
 <div style="position:absolute;top:71;left:799"><span class="ft0">R.U.T.: 76.683.750-6</span></div>
-<div style="position:absolute;top:115;left:728"><span class="ft0">NOTA DE CREDITO ELECTRONICA</span></div>
-<div style="position:absolute;top:167;left:846"><span class="ft0">N° {{$data['doc']->folio}}</span>
+<div style="position:absolute;top:115;left:720"><span class="ft0">NOTA DE CREDITO ELECTRONICA</span></div>
+<div style="position:absolute;top:167;left:876"><span class="ft0">N° {{$data['doc']->folio}}</span>
 </div>
 
 <div style="position:absolute;top:222;left:47"><span class="ft1">Sucursal : Avda Fermín Vivaceta 1662 - Independencia</span></div>
