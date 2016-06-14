@@ -34,7 +34,7 @@
         .ft0 {
             font-style: normal;
             font-weight: bold;
-            font-size: 20px;
+            font-size: 18px;
             font-family: Arial;
             color: #fe0000;
         }
