@@ -21,7 +21,7 @@ class RouteController extends \BaseController {
 				return HtmlController::nd($folio);
 			}
 			if($type == 52){
-				return HtmlController::nd($folio);
+				return HtmlController::guia($folio);
 			}
 		}
 		if($format == 'PDF'){
@@ -35,7 +35,7 @@ class RouteController extends \BaseController {
 				return PdfController::nd($folio);
 			}
 			if($type == 52){
-				return PdfController::nd($folio);
+				return PdfController::guia($folio);
 			}
 		}
 		if($format == 'Base64PDF'){
@@ -48,8 +48,8 @@ class RouteController extends \BaseController {
 			if($type == 56){
 				return PdfController::nd($folio);
 			}
-			if($type == 52){
-				return PdfController::nd($folio);
+			if($type == 52) {
+				return PdfController::guiaBase64($folio);
 			}
 		}
 	}

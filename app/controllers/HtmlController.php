@@ -32,9 +32,12 @@ class HtmlController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function guia()
+	public static function guia($folio)
 	{
-		//
+		$data['doc'] = Gui::where('numero','=',$folio)->get()->first();
+		$data['cli'] = Cli::where('rut','=',$data['doc']->rutcli)->get()->first();
+		$html = View::make('pdf.guia')->with(compact('data'))->render();
+		return $html;
 	}
 
 	/**
